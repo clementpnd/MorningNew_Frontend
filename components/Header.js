@@ -26,17 +26,14 @@ function Header() {
   }, []);
 
   const handleRegister = () => {
-    fetch(
-      "https://morning-new-backend-73tbslvw0-clementpnd.vercel.app/users/signup",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username: signUpUsername,
-          password: signUpPassword,
-        }),
-      }
-    )
+    fetch("https://morning-new-backend.vercel.app/users/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: signUpUsername,
+        password: signUpPassword,
+      }),
+    })
       .then((response) => response.json())
       .then((data) => {
         if (data.result) {
@@ -49,17 +46,14 @@ function Header() {
   };
 
   const handleConnection = () => {
-    fetch(
-      "https://morning-new-backend-73tbslvw0-clementpnd.vercel.apprs/signin",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          username: signInUsername,
-          password: signInPassword,
-        }),
-      }
-    )
+    fetch("https://morning-new-backend.vercel.app/users/signin", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: signInUsername,
+        password: signInPassword,
+      }),
+    })
       .then((response) => response.json())
       .then((data) => {
         if (data.result) {

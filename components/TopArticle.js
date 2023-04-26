@@ -14,7 +14,7 @@ function TopArticle(props) {
     }
 
     fetch(
-      `https://morning-new-backend-73tbslvw0-clementpnd.vercel.app/users/canBookmark/${user.token}`
+      `https://morning-new-backend.vercel.app/users/canBookmark/${user.token}`
     )
       .then((response) => response.json())
       .then((data) => {
