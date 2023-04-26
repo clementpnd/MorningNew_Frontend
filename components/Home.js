@@ -16,8 +16,8 @@ function Home() {
     fetch("https://morning-new-backend.vercel.app/articlesDb")
       .then((response) => response.json())
       .then((data) => {
-        setTopArticle(data.articles[0]);
-        setArticlesData(data.articles.filter((data, i) => i > 0));
+        setTopArticle(data.article[0]);
+        setArticlesData(data.article.filter((data, i) => i > 0));
       });
   }, []);
 
